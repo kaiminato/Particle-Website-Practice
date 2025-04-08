@@ -73,7 +73,7 @@ here
 }
 .hero > strong {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -89,6 +89,12 @@ here
   z-index: 1;
   width: auto;
   height: 110%;
+}
+.hero-particles {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
 }
 
 
