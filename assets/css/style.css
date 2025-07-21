@@ -6,6 +6,7 @@ body {
   font-size: 15px;
   line-height: 1.5;
   color: #333; 
+  background: #f5f6fa;
 }
 
 label, select, input, textarea, button {
@@ -69,7 +70,7 @@ section
   margin: 0 0 40px;
 }
 .section-button {
-  margin-top: 40px 0 0;
+  margin-top: 40px;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
@@ -203,6 +204,13 @@ about
   }
 }
 
+#about {
+  background: #fffaf3; /* 例：アイボリー系で差をつける */
+}
+
+#blog {
+  background: #6a92a0;
+}
 
 
 /* 
@@ -236,10 +244,13 @@ card
   color: #333;
   text-decoration: none;
   position: relative;
-  transition: background-color .25s;
+  transition: background-color .25s, transform .15s, box-shadow .15s;
+  background-color: #fff;
 }
 .card-link:hover {
-  background-color: #eee; 
+  background-color: #e8f5e9;
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12), 0 1.5px 3px #bbb;
 }
 .card-lable {
   position: absolute;
@@ -298,13 +309,15 @@ button
   text-align: center;
   padding: 15px 60px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 5px 5px 0 #bbb;
-  transition: box-shadow .25s;
+  transition: box-shadow .25s, transform .1s;
+  cursor: pointer;
 }
 
 .button:hover {
-  box-shadow: 0 0 0 #bbb;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 1.5px 3px #bbb;
+  transform: translateY(-3px) scale(1.04);
 }
 .button.button-submission {
   background: #92d3ca;
@@ -340,6 +353,7 @@ button
     min-width: auto;
     width: 100%;
   }
+}
 
 /* 
 form
@@ -369,7 +383,7 @@ form
   .form-table td {
     display: block;
   } 
-}
+}  /* ← ここでメディアクエリを閉じる */
 
 /* 
 works
@@ -414,6 +428,7 @@ footer
 }
 .footer-mapinfo {
   width: 40%;
+  padding-left: 30px;
 }
 .footer-maplogo {
   font-size: 25px;
